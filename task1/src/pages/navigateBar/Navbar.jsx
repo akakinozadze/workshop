@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
+import Button from "react-bootstrap/Button";
+
 import "./navbar.css";
 const appRoutes = Object.entries(routes);
 
@@ -12,14 +14,24 @@ const Navbar = () => {
       {appRoutes.map((route) => {
         const [key, value] = route;
         return (
-          <button
-            key={key}
-            onClick={() => {
-              navigate(value);
-            }}
+          <Button
+          key={key}
+          onClick={() => {
+            navigate(value);
+          }}
+          variant="light"
           >
             {key}
-          </button>
+          </Button>
+
+          // <button
+          //   key={key}
+          //   onClick={() => {
+          //     navigate(value);
+          //   }}
+          // >
+          //   {key}
+          // </button>
         );
       })}
     </div>
@@ -27,3 +39,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+{
+  /* <Button variant="light">Light</Button>{' '} */
+}

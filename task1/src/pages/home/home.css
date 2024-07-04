@@ -1,7 +1,12 @@
-.Home {
-  max-width: 300px;
-  height: 300px;
+.bootstrap1 {
+  background-color: burlywood;
+  max-width: 32rem;
+  height: 30rem;
   width: 100%;
+  display: grid;
+  place-items: center;
   margin: auto;
-  background-color: rgb(30, 154, 113);
+  border-radius: 2rem;
+  box-shadow: 0 0 1em 20px;
+  margin-top: 6.25rem;
 }
