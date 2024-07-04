@@ -1,13 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import routes from "../constants/routes";
-
+import routes from "../../constants/routes";
+import "./navbar.css";
 const appRoutes = Object.entries(routes);
 
 const Navbar = () => {
   const navigate = useNavigate();
+
   return (
-    <div>
+    <div className="Navbar">
       {appRoutes.map((route) => {
         const [key, value] = route;
         return (

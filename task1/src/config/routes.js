@@ -1,9 +1,8 @@
-// import { Component } from "react";
 import routes from "../constants/routes";
-import Home from "../pages/Home";
-import Members from "../pages/Members";
+import Home from "../pages/home/Home";
+import Members from "../pages/members/Members";
 
-const appRoutes = [
+const approutes = [
   {
     path: routes.home,
     Component: Home,
@@ -14,4 +13,4 @@ const appRoutes = [
   },
 ];
 
-export default appRoutes;
+export default approutes;
