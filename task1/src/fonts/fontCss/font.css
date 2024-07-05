@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Playwrite GB S";
+  src: url("../fontConteiner/PlaywriteGBS-Regular.eot");
+  src: url("PlaywriteGBS-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fontConteiner/PlaywriteGBS-Regular.woff2") format("woff2"),
+    url("../fontConteiner/PlaywriteGBS-Regular.woff") format("woff"),
+    url("../fontConteiner/PlaywriteGBS-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

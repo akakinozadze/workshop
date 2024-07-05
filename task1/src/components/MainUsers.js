@@ -16,10 +16,4 @@ const MainUsers = () => {
 };
 
 export default MainUsers;
-// FirstName: "",
-// LastName: "",
-// Age: "",
-// SocialNetwor: "",
-// Email: "",
-// City: "",
-// Address: "",
+

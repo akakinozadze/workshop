@@ -3,11 +3,11 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import File from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { addUser } from "../features/usersSlice";
 import { useNavigate } from "react-router-dom";
 import routes from "../constants/routes";
+import "./homeForm.css";
 const HomeForm = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
@@ -33,8 +33,9 @@ const HomeForm = () => {
       <Form onSubmit={submitHandler}>
         <Row className="mb-3">
           <Col>
-            <Form.Label>First name</Form.Label>
+            <Form.Label className="InputType">First name</Form.Label>
             <Form.Control
+              className="InputType"
               name="FirstName"
               placeholder="First name"
               onChange={(e) => {
@@ -46,8 +47,9 @@ const HomeForm = () => {
             />
           </Col>
           <Col>
-            <Form.Label>Last name</Form.Label>
+            <Form.Label className="InputType">Last name</Form.Label>
             <Form.Control
+              className="InputType"
               name="LastName"
               placeholder="Last name"
               onChange={(e) => {
@@ -60,6 +62,9 @@ const HomeForm = () => {
           </Col>
         </Row>
         <Row className="mb-3">
+          {/* // ვეცადე თუმცა aip ის გარეშე არ გამომივიდა ამ ეტაპზე 
+          // სთორიჯიებიც ვეძებე თუმცა ...  */}
+
           {/* <Form.Group controlId="formFile" className="mb-3">
             <Form.Label>Upload picture</Form.Label>
             <Form.Control
@@ -74,8 +79,9 @@ const HomeForm = () => {
             />
           </Form.Group> */}
           <Col>
-            <Form.Label>Age</Form.Label>
+            <Form.Label className="InputType">Age</Form.Label>
             <Form.Control
+              className="InputType"
               name="Age"
               placeholder="Age"
               onChange={(e) => {
@@ -88,8 +94,9 @@ const HomeForm = () => {
           </Col>
         </Row>
         <Form.Group className="mb-3" controlId="formGridAddress1">
-          <Form.Label>Your Social network</Form.Label>
+          <Form.Label className="InputType">Your Social network</Form.Label>
           <Form.Control
+            className="InputType"
             name="SocialNetwor"
             placeholder="Social networ"
             aria-label="Social networ"
@@ -100,8 +107,9 @@ const HomeForm = () => {
           />
         </Form.Group>
         <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
+          <Form.Label className="InputType">Email</Form.Label>
           <Form.Control
+            className="InputType"
             name="Email"
             type="email"
             placeholder="Enter email"
@@ -112,8 +120,9 @@ const HomeForm = () => {
         </Form.Group>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>Address</Form.Label>
+            <Form.Label className="InputType">Address</Form.Label>
             <Form.Control
+              className="InputType"
               name="Address"
               placeholder="1234 Main St"
               onChange={(e) => {
@@ -125,8 +134,9 @@ const HomeForm = () => {
             />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>City</Form.Label>
+            <Form.Label className="InputType">City</Form.Label>
             <Form.Control
+              className="InputType"
               name="City"
               placeholder="City"
               onChange={(e) => {
@@ -138,7 +148,12 @@ const HomeForm = () => {
             />
           </Form.Group>
         </Row>
-        <Button disabled={!UserValue} type="submit" variant="success">
+        <Button
+          disabled={!UserValue}
+          type="submit"
+          variant="success"
+          className="InputType"
+        >
           Submit
         </Button>{" "}
       </Form>
