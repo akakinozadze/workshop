@@ -1,10 +1,11 @@
 import React from "react";
 import "./members.css";
+import MainUsers from "../../components/MainUsers";
 
 const Members = () => {
   return (
     <div className="Members">
-      <h1>Members</h1>
+      <MainUsers />
     </div>
   );
 };

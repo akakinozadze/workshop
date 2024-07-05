@@ -1,5 +1,9 @@
 .Members {
-  /* height: 300px; */
+  max-width: 35rem;
+  height: 300px;
   background-color: burlywood;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }

@@ -3,8 +3,13 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import { useSelector } from "react-redux";
+import File from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { addUser } from "../features/usersSlice";
+import { useNavigate } from "react-router-dom";
+import routes from "../constants/routes";
 const HomeForm = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     FirstName: "",
     LastName: "",
@@ -13,24 +18,19 @@ const HomeForm = () => {
     Email: "",
     City: "",
     Address: "",
+    Image: "",
   });
-  console.log(user);
-
-  const membersImfo = [];
-  console.log(membersImfo, "carieli masivi");
-
-  const submitHendler = (e) => {
+  console.log(user, "რახდება ამ");
+  const dispatch = useDispatch();
+  const submitHandler = (e) => {
     e.preventDefault();
-  };
-
-  const onchlick = () => {
-    membersImfo.push(user);
+    dispatch(addUser(user));
+    navigate(routes.members);
   };
   let UserValue = user.FirstName && user.Address;
-
   return (
     <div className="bootstrap1">
-      <Form onSubmit={submitHendler}>
+      <Form onSubmit={submitHandler}>
         <Row className="mb-3">
           <Col>
             <Form.Label>First name</Form.Label>
@@ -60,22 +60,18 @@ const HomeForm = () => {
           </Col>
         </Row>
         <Row className="mb-3">
-          <Form.Group className="mb-3" as={Col} controlId="formGridState">
-            <Form.Label>Gender</Form.Label>
-            <Form.Select
+          <Form.Group controlId="formFile" className="mb-3">
+            <Form.Label>Upload picture</Form.Label>
+            <Form.Control
+              name="Img"
+              type="file"
               onChange={(e) => {
                 setUser((prev) => ({
                   ...prev,
                   [e.target.name]: e.target.value,
                 }));
               }}
-              defaultValue="Choose..."
-              name="gender"
-            >
-              <option></option>
-              <option name="Male">Male</option>
-              <option name="female">female</option>
-            </Form.Select>
+            />
           </Form.Group>
           <Col>
             <Form.Label>Age</Form.Label>
@@ -142,12 +138,7 @@ const HomeForm = () => {
             />
           </Form.Group>
         </Row>
-        <Button
-          disabled={!UserValue}
-          type="submit"
-          variant="success"
-          onClick={onchlick}
-        >
+        <Button disabled={!UserValue} type="submit" variant="success">
           Submit
         </Button>{" "}
       </Form>

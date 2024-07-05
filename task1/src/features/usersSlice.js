@@ -1,19 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: [],
+  users: [],
 };
 
 const usersSlice = createSlice({
   initialState,
   name: "Users",
   reducers: {
-    
-  // იდეურად ამას ვერ გავცდი როგორ შემოვიტანო მასივი რომ მერე სღორიმ წაიკითხოს რამინდა :დდდ 
-
-    
+    addUser: (state, action) => {
+      state.users.push(action.payload);
+    },
   },
 });
 
-
-export default usersSlice;
+export const { addUser } = usersSlice.actions;
+export default usersSlice.reducer;
