@@ -9,10 +9,13 @@
 .users {
   font-weight: 500;
 }
-.UserImg {
+/* .UserImg {
   max-width: 8rem;
   height: 8rem;
   width: 100%;
   margin: auto;
   border: 0.3rem black solid;
+} */
+.Img {
+  margin: auto;
 }

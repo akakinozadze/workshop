@@ -60,7 +60,7 @@ const HomeForm = () => {
           </Col>
         </Row>
         <Row className="mb-3">
-          <Form.Group controlId="formFile" className="mb-3">
+          {/* <Form.Group controlId="formFile" className="mb-3">
             <Form.Label>Upload picture</Form.Label>
             <Form.Control
               name="Img"
@@ -72,7 +72,7 @@ const HomeForm = () => {
                 }));
               }}
             />
-          </Form.Group>
+          </Form.Group> */}
           <Col>
             <Form.Label>Age</Form.Label>
             <Form.Control

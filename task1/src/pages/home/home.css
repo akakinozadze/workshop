@@ -1,5 +1,5 @@
 .bootstrap1 {
-  background-color: burlywood;
+  background: linear-gradient(to top, #ffffcc 0%, #ffffff 100%);
   max-width: 32rem;
   height: 44rem;
   width: 100%;

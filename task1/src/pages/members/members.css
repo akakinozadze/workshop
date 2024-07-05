@@ -1,9 +1,12 @@
 .Members {
-  max-width: 35rem;
-  height: 300px;
-  background-color: burlywood;
+  max-width: 30rem;
+  min-height: 35rem;
+  background: linear-gradient(to top, #ffffcc 0%, #ffffff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
+  border-radius: 2rem;
+  box-shadow: 0 0 1em 20px greenyellow;
+  margin-top: 6.25rem;
 }
