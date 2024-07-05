@@ -15,23 +15,14 @@ const Navbar = () => {
         const [key, value] = route;
         return (
           <Button
-          key={key}
-          onClick={() => {
-            navigate(value);
-          }}
-          variant="light"
+            key={key}
+            onClick={() => {
+              navigate(value);
+            }}
+            variant="light"
           >
             {key}
           </Button>
-
-          // <button
-          //   key={key}
-          //   onClick={() => {
-          //     navigate(value);
-          //   }}
-          // >
-          //   {key}
-          // </button>
         );
       })}
     </div>
@@ -39,7 +30,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-{
-  /* <Button variant="light">Light</Button>{' '} */
-}
