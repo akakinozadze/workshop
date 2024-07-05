@@ -8,16 +8,25 @@ const HomeForm = () => {
   const [user, setUser] = useState({
     FirstName: "",
     LastName: "",
-    SocialNetwor: "",
     Age: "",
+    SocialNetwor: "",
     Email: "",
-    Address: "",
     City: "",
+    Address: "",
   });
   console.log(user);
+
+  const membersImfo = [];
+  console.log(membersImfo, "carieli masivi");
+
   const submitHendler = (e) => {
     e.preventDefault();
   };
+
+  const onchlick = () => {
+    membersImfo.push(user);
+  };
+  let UserValue = user.FirstName && user.Address;
 
   return (
     <div className="bootstrap1">
@@ -133,7 +142,12 @@ const HomeForm = () => {
             />
           </Form.Group>
         </Row>
-        <Button type="submit" variant="success">
+        <Button
+          disabled={!UserValue}
+          type="submit"
+          variant="success"
+          onClick={onchlick}
+        >
           Submit
         </Button>{" "}
       </Form>
