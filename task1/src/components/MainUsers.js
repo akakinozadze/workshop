@@ -6,14 +6,13 @@ const MainUsers = () => {
   const users = useSelector((state) => state.users.users);
   const members = useSelector((state) => state.members.members);
   return (
-    <div>
+    <div className="Container">
       <div className="SocMediaIcon">
         {members.map((e) => {
           console.log(e);
           return <div key={e.key}>{e}</div>;
         })}
       </div>
-
       {users.map((user, index) => (
         <User key={index} user={user} />
       ))}

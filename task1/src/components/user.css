@@ -1,5 +1,5 @@
 .MainBox {
-  max-width: 30rem;
+  max-width: 40rem;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -14,4 +14,13 @@
 
 .Img {
   margin: auto;
+}
+.SocMediaIcon {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+}
+.Container {
+  width: 100%;
+  position: relative;
 }
