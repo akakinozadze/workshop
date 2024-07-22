@@ -50,7 +50,7 @@ const HomeForm = () => {
     dispatch(addMember(members1));
     navigate(routes.members);
   };
-  // let UserValue = user.FirstName && user.Address;
+  let UserValue = user.FirstName && user.Address;
   return (
     <div className="bootstrap1">
       <div>
@@ -179,7 +179,7 @@ const HomeForm = () => {
             </Form.Group>
           </Row>
           <Button
-            // disabled={!UserValue}
+            disabled={!UserValue}
             type="submit"
             variant="success"
             className="InputType"
