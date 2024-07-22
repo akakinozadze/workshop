@@ -1,6 +1,7 @@
 import React from "react";
 import "./user.css";
 import Img from "./Img";
+
 const User = ({ user }) => {
   return (
     <div className="MainBox">

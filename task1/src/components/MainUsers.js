@@ -4,10 +4,16 @@ import User from "./User";
 
 const MainUsers = () => {
   const users = useSelector((state) => state.users.users);
-  console.log(users, "heloo");
-
+  const members = useSelector((state) => state.members.members);
   return (
     <div>
+      <div className="aoisd">
+        {members.map((e) => {
+          console.log(e);
+          return <div key={e.key}>{e}</div>;
+        })}
+      </div>
+
       {users.map((user, index) => (
         <User key={index} user={user} />
       ))}
@@ -16,4 +22,3 @@ const MainUsers = () => {
 };
 
 export default MainUsers;
-
