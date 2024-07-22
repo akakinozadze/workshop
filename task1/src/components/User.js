@@ -9,7 +9,6 @@ const User = ({ user }) => {
         {" "}
         <Img />
       </div>
-      {/* <img className="UserImg" src={user.Img} alt="imgEroor"></img> */}
       <h2 className="users">
         {user.FirstName} - {user.LastName}
       </h2>

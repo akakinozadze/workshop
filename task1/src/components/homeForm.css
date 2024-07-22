@@ -2,20 +2,7 @@
   font-family: "Playwrite GB S";
   font-size: 1rem;
 }
-.facebook {
-  background-image: url(../iconImg/facebook.png);
-  background-repeat: no-repeat;
-  max-width: 60px;
-  height: 60px;
-  width: 100%;
-}
-.error {
-  background-image: url(../iconImg/twitter.png);
-  background-repeat: no-repeat;
-  max-width: 60px;
-  height: 60px;
-  width: 100%;
-}
+
 .Hello {
   max-width: 100px;
   height: 100px;
@@ -25,7 +12,6 @@
 
 .SocMediaIcon {
   width: 100%;
-  /* position: absolute; */
 }
 
 .Img1 {
@@ -36,7 +22,7 @@
   height: 100px;
   width: 100%;
   margin: auto;
-  /* background-color: aquamarine; */
+
 }
 
 .Img2 {
