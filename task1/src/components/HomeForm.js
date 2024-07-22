@@ -12,6 +12,7 @@ import "./homeForm.css";
 const HomeForm = () => {
   const navigate = useNavigate();
   const [members1, setMembers1] = useState([]);
+
   console.log(members1, "members1");
 
   const [user, setUser] = useState({
@@ -24,6 +25,7 @@ const HomeForm = () => {
     Address: "",
   });
   const sum = user.SocialNetwor.split(".");
+  console.log(sum, "X");
 
   useEffect(() => {
     members1.push(
@@ -31,11 +33,15 @@ const HomeForm = () => {
         <div className="Img1"></div>
       ) : sum.includes("facebook") ? (
         <div className="Img2"></div>
+      ) : sum.includes("linkedin") ? (
+        <div className="Img3"></div>
+      ) : sum.includes("https://x") ? (
+        <div className="Img4"></div>
       ) : (
         <></>
       )
     );
-  }, [user.City]);
+  }, [user.SocialNetwor]);
 
   const dispatch = useDispatch();
   const submitHandler = (e) => {
@@ -44,7 +50,7 @@ const HomeForm = () => {
     dispatch(addMember(members1));
     navigate(routes.members);
   };
-  let UserValue = user.FirstName && user.Address;
+  // let UserValue = user.FirstName && user.Address;
   return (
     <div className="bootstrap1">
       <div>
@@ -173,7 +179,7 @@ const HomeForm = () => {
             </Form.Group>
           </Row>
           <Button
-            // disabled={UserValue}
+            // disabled={!UserValue}
             type="submit"
             variant="success"
             className="InputType"

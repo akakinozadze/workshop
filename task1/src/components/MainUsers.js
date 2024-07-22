@@ -7,7 +7,7 @@ const MainUsers = () => {
   const members = useSelector((state) => state.members.members);
   return (
     <div>
-      <div className="aoisd">
+      <div className="SocMediaIcon">
         {members.map((e) => {
           console.log(e);
           return <div key={e.key}>{e}</div>;

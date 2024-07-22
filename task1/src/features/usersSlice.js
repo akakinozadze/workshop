@@ -17,7 +17,7 @@ const usersSlice = createSlice({
     },
   },
 });
-console.log(usersSlice, "state");
+
 
 export const { addUser } = usersSlice.actions;
 export const { addMember } = usersSlice.actions;
